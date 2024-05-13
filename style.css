@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Hind", sans-serif;
+}
+
+a,
+a:hover,
+a:visited {
+  color: #0071bc;
+}
+
+#map {
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+}
+
+#header {
+  margin: auto;
+  width: 100%;
+  position: relative;
+  z-index: 5;
+}
+
+#header h1,
+#header h2,
+#header p {
+  margin: 0;
+  padding: 2vh 2vw;
+  text-align: center;
+}
+
+#footer {
+  width: 100%;
+  min-height: 5vh;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  text-align: center;
+  line-height: 25px;
+  font-size: 13px;
+  position: relative;
+  z-index: 5;
+}
+
+#features {
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.centered {
+  width: 50vw;
+  margin: 0 auto;
+}
+
+.lefty {
+  width: 33vw;
+  margin-left: 5vw;
+}
+
+.righty {
+  width: 33vw;
+  margin-left: 60vw;
+}
+
+.fully {
+  width: 100%;
+  margin: auto;
+}
+
+.light {
+  color: #1e252a;
+  background-color: #f1f1f1;
+}
+.dark {
+  color: #f1f1f1;
+  background-color: #1e252a;
+}
+
+.step {
+  padding-bottom: 50vh;
+  opacity: 0.25;
+}
+
+.step.active {
+  opacity: 0.9;
+}
+
+.step div {
+  padding: 25px 50px;
+  line-height: 1.7;
+  font-size: 20px;
+  width: 400px;
+}
+
+.step div > p {
+  margin: 0;
+}
+
+.step img {
+  width: 100%;
+}
+
+@media (max-width: 750px) {
+  .centered,
+  .lefty,
+  .righty,
+  .fully {
+    width: 90vw;
+    margin: 0 auto;
+  }
+}
+
+/* Fix issue on mobile browser where scroll breaks  */
+.mapboxgl-canvas-container.mapboxgl-touch-zoom-rotate.mapboxgl-touch-drag-pan,
+.mapboxgl-canvas-container.mapboxgl-touch-zoom-rotate.mapboxgl-touch-drag-pan
+  .mapboxgl-canvas {
+  touch-action: unset;
+}
+
+/* ------------------------------------------------------ */
+/*                    Begin custom CSS                    */
+/* ------------------------------------------------------ */
+
+.full-quarantine-marker {
+  background-image: url("images/Full-Quarantine2.gif");
+  background-size: cover;
+  width: 578px;
+  height: 578px;
+  z-index: 9999;
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.blockade-marker {
+  background-image: url("images/Blockade3.gif");
+  background-size: cover;
+  width: 700px;
+  height: 700px;
+  z-index: 9999;
+  z-index: 9999;
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.part-quarantine-marker {
+  background-image: url("images/Part-Quarantine-wShips-v1.gif");
+  background-size: cover;
+  width: 600px;
+  height: 600px;
+  z-index: 9999;
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
